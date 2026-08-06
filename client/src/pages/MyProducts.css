@@ -1,0 +1,66 @@
+/* ======================================
+   My Products
+====================================== */
+
+.my-products-title {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.table img {
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: .3s;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.badge {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.btn-sm {
+    padding: 7px 14px;
+    border-radius: 8px;
+}
+
+.card {
+    border-radius: 18px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.form-control {
+    height: 48px;
+    border-radius: 10px;
+}
+
+.table-responsive {
+    border-radius: 12px;
+}
+
+@media(max-width:768px) {
+
+    .table {
+        min-width: 900px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+}

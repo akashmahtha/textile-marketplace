@@ -1,0 +1,44 @@
+.card {
+    border-radius: 18px;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+img {
+    border-radius: 12px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.badge {
+    padding: 8px 15px;
+}
+
+.sticky-top {
+    z-index: 1;
+}
+
+@media(max-width:992px) {
+
+    .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .card-body {
+        padding: 18px;
+    }
+
+    img {
+        height: 180px !important;
+    }
+
+}

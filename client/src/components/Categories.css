@@ -1,0 +1,17 @@
+.category-card {
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    border-radius: 15px;
+
+}
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15) !important;
+
+}

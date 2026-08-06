@@ -1,0 +1,210 @@
+/* ==========================================
+   Supplier Profile
+========================================== */
+
+body {
+    background: #f5f7fb;
+}
+
+/* ==========================================
+   Profile Card
+========================================== */
+
+.supplier-profile-card {
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.supplier-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+}
+
+.supplier-profile-card .card-body {
+    padding: 40px;
+}
+
+/* ==========================================
+   Supplier Logo
+========================================== */
+
+.supplier-logo {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 58px;
+    box-shadow: 0 12px 25px rgba(255, 193, 7, .35);
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.supplier-profile-card h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.supplier-profile-card p {
+    font-size: 15px;
+    color: #6c757d;
+    margin-bottom: 12px;
+}
+
+.supplier-profile-card p svg {
+    font-size: 17px;
+}
+
+/* ==========================================
+   Section Titles
+========================================== */
+
+.supplier-profile-card h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   Badges
+========================================== */
+
+.badge {
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 9px 16px;
+}
+
+/* ==========================================
+   Products Header
+========================================== */
+
+.products-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.products-header .badge {
+    font-size: 15px;
+}
+
+/* ==========================================
+   Empty State
+========================================== */
+
+.empty-card {
+    border-radius: 18px;
+}
+
+.empty-card svg {
+    color: #ffc107;
+}
+
+.empty-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.empty-card p {
+    color: #6c757d;
+}
+
+/* ==========================================
+   Product Card Hover
+========================================== */
+
+.product-card {
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:992px) {
+
+    .supplier-profile-card .card-body {
+        padding: 30px;
+    }
+
+    .supplier-logo {
+        width: 120px;
+        height: 120px;
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+
+    .supplier-profile-card h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .supplier-profile-card .card-body {
+        padding: 22px;
+    }
+
+    .supplier-logo {
+        width: 100px;
+        height: 100px;
+        font-size: 42px;
+    }
+
+    .supplier-profile-card h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .supplier-profile-card p {
+        font-size: 14px;
+    }
+
+    .supplier-profile-card h6 {
+        margin-top: 15px;
+    }
+
+    .products-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .supplier-profile-card h2 {
+        font-size: 22px;
+    }
+
+    .supplier-profile-card p {
+        font-size: 13px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .supplier-logo {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+    }
+
+}

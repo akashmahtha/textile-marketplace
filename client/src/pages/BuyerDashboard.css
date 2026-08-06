@@ -1,0 +1,237 @@
+/* ===========================
+   Buyer Dashboard
+=========================== */
+
+body {
+    background: #f5f7fb;
+}
+
+.buyer-dashboard {
+    min-height: 100vh;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.dashboard-header {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+}
+
+.dashboard-header h2 {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.dashboard-header p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #6b7280;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+}
+
+.card-header {
+    background: #fff;
+    border: none;
+    padding: 18px 22px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ===========================
+   Order Summary
+=========================== */
+
+.card.bg-primary,
+.card.bg-success,
+.card.bg-warning,
+.card.bg-danger {
+    color: #fff;
+}
+
+.card.bg-primary:hover,
+.card.bg-success:hover,
+.card.bg-warning:hover,
+.card.bg-danger:hover {
+    transform: translateY(-8px);
+}
+
+/* ===========================
+   Profile
+=========================== */
+
+.rounded-circle {
+    border: 5px solid #0d6efd;
+}
+
+label {
+    font-weight: 600;
+    color: #374151;
+}
+
+p {
+    color: #555;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background: #f8f9fa;
+}
+
+.table th {
+    font-weight: 600;
+    color: #374151;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* ===========================
+   Badges
+=========================== */
+
+.badge {
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ===========================
+   Quick Actions
+=========================== */
+
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ===========================
+   Order Status
+=========================== */
+
+.order-status-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.order-status-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.order-status-text {
+    font-weight: 600;
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+.form-control {
+    border-radius: 10px;
+    height: 48px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px) {
+
+    .dashboard-header {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .dashboard-header {
+        padding: 20px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 26px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .dashboard-header h2 {
+        font-size: 22px;
+    }
+
+    .dashboard-header p {
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .badge {
+        font-size: 12px;
+    }
+
+}

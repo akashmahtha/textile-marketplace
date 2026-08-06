@@ -1,0 +1,43 @@
+.card {
+    border-radius: 16px;
+}
+
+.card-header {
+    padding: 18px 25px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    min-height: 48px;
+}
+
+textarea.form-control {
+    min-height: 120px;
+}
+
+.btn-lg {
+    padding: 12px;
+    font-weight: 600;
+}
+
+img {
+    border-radius: 10px;
+    transition: .3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width:768px) {
+
+    .card-body {
+        padding: 18px;
+    }
+
+}

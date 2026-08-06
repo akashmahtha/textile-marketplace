@@ -1,0 +1,169 @@
+/* =====================================
+   Order Success Page
+===================================== */
+
+body {
+    background: #f5f7fb;
+}
+
+.order-success-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.success-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.success-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+.success-card .card-body {
+    padding: 50px 35px;
+}
+
+/* =====================================
+   Success Icon
+===================================== */
+
+.success-icon {
+    font-size: 90px;
+    color: #28a745;
+    animation: pop .8s ease;
+}
+
+@keyframes pop {
+
+    0% {
+        transform: scale(.3);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* =====================================
+   Order ID
+===================================== */
+
+.order-id-box {
+    background: #f8f9fa;
+    border: 2px dashed #0d6efd;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.order-id-box h5 {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.order-id-box h4 {
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   Alert
+===================================== */
+
+.alert {
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+/* =====================================
+   Buttons
+===================================== */
+
+.btn {
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn svg {
+    margin-right: 8px;
+}
+
+/* =====================================
+   Heading
+===================================== */
+
+.success-card h2 {
+    color: #212529;
+}
+
+.success-card p {
+    font-size: 16px;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media(max-width:768px) {
+
+    .success-card .card-body {
+        padding: 35px 20px;
+    }
+
+    .success-icon {
+        font-size: 70px;
+    }
+
+    .success-card h2 {
+        font-size: 28px;
+    }
+
+    .order-id-box h4 {
+        font-size: 22px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .order-success-page {
+        padding: 20px 0;
+    }
+
+    .success-card h2 {
+        font-size: 24px;
+    }
+
+    .success-card p {
+        font-size: 14px;
+    }
+
+    .order-id-box {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+}
