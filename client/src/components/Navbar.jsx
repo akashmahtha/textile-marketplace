@@ -112,7 +112,7 @@ const Navbar = () => {
                 </button>
 
                 <div
-                    className="collapse navbar-collapse"
+                    className="collapse navbar-collapse justify-content-between"
                     id="navbar"
                 >
                     {/* ===========================

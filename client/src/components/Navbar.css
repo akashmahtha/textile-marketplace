@@ -40,13 +40,10 @@
 =========================================== */
 
 .navbar-collapse {
-
     display: flex;
-
     align-items: center;
-
+    justify-content: space-between;
     width: 100%;
-
 }
 
 /* ===========================================
@@ -135,15 +132,11 @@
 =========================================== */
 
 .right-section {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
-    margin-left: 25px;
-
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 /* ===========================================
@@ -365,27 +358,20 @@
     }
 
     .navbar-collapse {
-
-        margin-top: 18px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .menu-list {
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 8px;
-
-        margin-left: 0;
-
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex: 1;
     }
 
     .right-section {
