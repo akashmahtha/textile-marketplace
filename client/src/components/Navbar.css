@@ -1,6 +1,22 @@
 /* ===========================================
    AKM Textile Hub Navbar
 =========================================== */
+.custom-navbar * {
+    box-sizing: border-box;
+}
+
+.custom-navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-navbar li {
+    list-style: none;
+}
+
+.custom-navbar a {
+    text-decoration: none;
+}
 
 .custom-navbar {
     background: #111827;
@@ -147,7 +163,7 @@
    Nav Links
 =========================================== */
 
-.menu-list .nav-link {
+.menu-link {
 
     color: #ffffff;
 
@@ -165,13 +181,13 @@
 
 }
 
-.menu-list .nav-link:hover {
+.menu-link:hover {
 
     color: #FFC107;
 
 }
 
-.menu-list .nav-link::after {
+.menu-link::after {
 
     content: "";
 

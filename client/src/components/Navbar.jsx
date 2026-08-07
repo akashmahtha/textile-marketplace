@@ -69,7 +69,7 @@ const Navbar = () => {
 
     return (
 
-        <nav className="navbar navbar-expand-lg custom-navbar sticky-top">
+        <nav className="custom-navbar sticky-top">
 
             <div className="container-fluid">
 
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 <Link
                     to="/"
-                    className="navbar-brand logo"
+                    className="logo"
                 >
 
                     <span className="logo-yellow">
@@ -112,14 +112,14 @@ const Navbar = () => {
                 </button>
 
                 <div
-                    className="collapse navbar-collapse justify-content-between"
+                    className="navbar-collapse"
                     id="navbar"
                 >
                     {/* ===========================
     Left Menu
 =========================== */}
 
-                    <ul className="navbar-nav menu-list">
+                    <ul className="menu-list">
 
                         {/* Home */}
 
@@ -128,12 +128,10 @@ const Navbar = () => {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    isActive ? "nav-link custom-active" : "nav-link"
+                                    isActive ? "menu-link custom-active" : "menu-link"
                                 }
                             >
-
                                 Home
-
                             </NavLink>
 
                         </li>
@@ -148,7 +146,7 @@ const Navbar = () => {
 
                                     <a
                                         href="#"
-                                        className="nav-link dropdown-toggle"
+                                        className="menu-link dropdown-toggle"
                                         data-bs-toggle="dropdown"
                                         role="button"
                                     >
@@ -206,11 +204,11 @@ const Navbar = () => {
 
                                 <NavLink
                                     to="/products"
-                                    className="nav-link"
+                                    className={({ isActive }) =>
+                                        isActive ? "menu-link custom-active" : "menu-link"
+                                    }
                                 >
-
                                     Products
-
                                 </NavLink>
 
                             )}
@@ -223,11 +221,11 @@ const Navbar = () => {
 
                             <NavLink
                                 to="/categories"
-                                className="nav-link"
+                                className={({ isActive }) =>
+                                    isActive ? "menu-link custom-active" : "menu-link"
+                                }
                             >
-
                                 Categories
-
                             </NavLink>
 
                         </li>
@@ -238,11 +236,11 @@ const Navbar = () => {
 
                             <NavLink
                                 to="/suppliers"
-                                className="nav-link"
+                                className={({ isActive }) =>
+                                    isActive ? "menu-link custom-active" : "menu-link"
+                                }
                             >
-
                                 Suppliers
-
                             </NavLink>
 
                         </li>
@@ -253,11 +251,11 @@ const Navbar = () => {
 
                             <NavLink
                                 to="/about"
-                                className="nav-link"
+                                className={({ isActive }) =>
+                                    isActive ? "menu-link custom-active" : "menu-link"
+                                }
                             >
-
                                 About
-
                             </NavLink>
 
                         </li>
@@ -274,11 +272,11 @@ const Navbar = () => {
                                             ? "/buyer/dashboard"
                                             : "/supplier/dashboard"
                                     }
-                                    className="nav-link"
+                                    className={({ isActive }) =>
+                                        isActive ? "menu-link custom-active" : "menu-link"
+                                    }
                                 >
-
                                     Dashboard
-
                                 </NavLink>
 
                             </li>
