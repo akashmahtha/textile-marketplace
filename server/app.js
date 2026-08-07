@@ -18,28 +18,36 @@ import aiRoutes from "./routes/aiRoutes.js";
 const app = express();
 
 // =======================
-// Middlewares
+// CORS
 // =======================
+
 const allowedOrigins = [
     "http://localhost:5173",
-    process.env.CLIENT_URL,
+    "https://textile-marketplace-chi.vercel.app",
 ];
 
 app.use(
     cors({
-        origin: (origin, callback) => {
-            // Allow requests with no origin (Postman, mobile apps, etc.)
+        origin: function (origin, callback) {
+
+            // Allow Postman, mobile apps, etc.
             if (!origin) return callback(null, true);
 
             if (allowedOrigins.includes(origin)) {
                 return callback(null, true);
             }
 
+            console.log("Blocked Origin:", origin);
+
             return callback(new Error("Not allowed by CORS"));
         },
         credentials: true,
     })
 );
+
+// =======================
+// Middlewares
+// =======================
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -50,12 +58,19 @@ app.use(
         crossOriginResourcePolicy: false,
     })
 );
+
 app.use(morgan("dev"));
 
 // =======================
-app.use("/uploads", express.static(path.resolve("uploads")));
-// Health Check Route
+// Static Files
 // =======================
+
+app.use("/uploads", express.static(path.resolve("uploads")));
+
+// =======================
+// Health Check
+// =======================
+
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
@@ -67,13 +82,6 @@ app.get("/", (req, res) => {
 // API Routes
 // =======================
 
-// import authRoutes from "./routes/authRoutes.js";
-
-// 
-// 
-// 
-// import aiRoutes from "./routes/aiRoutes.js";
-
 app.use("/api/auth", authRoutes);
 app.use("/api/onboarding", onboardingRoutes);
 app.use("/api/products", productRoutes);
@@ -81,12 +89,13 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/buyer", buyerRoutes);
 app.use("/api/supplier", supplierRoutes);
-// app.use("/api/ai", aiRoutes);
 app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/ai", aiRoutes);
+
 // =======================
 // 404 Route
 // =======================
+
 app.use((req, res) => {
     res.status(404).json({
         success: false,
