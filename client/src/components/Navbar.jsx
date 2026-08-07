@@ -127,7 +127,9 @@ const Navbar = () => {
 
                             <NavLink
                                 to="/"
-                                className="nav-link"
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link custom-active" : "nav-link"
+                                }
                             >
 
                                 Home

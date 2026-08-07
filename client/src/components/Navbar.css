@@ -461,3 +461,10 @@
 .dropdown-toggle::after {
     display: none;
 }
+
+.custom-active {
+    color: #FFC107 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
