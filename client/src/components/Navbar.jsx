@@ -101,7 +101,7 @@ const Navbar = () => {
                 =========================== */}
 
                 <button
-                    className="navbar-toggler"
+                    className="navbar-toggler-icon"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbar"
