@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 
 import { getMyOrders } from "../services/orderService";
 
@@ -68,7 +68,7 @@ const MyOrders = () => {
         return (
 
             <>
-                <Navbar />
+                {/* <Navbar /> */}
 
                 <div className="container py-5 text-center">
 
@@ -83,7 +83,7 @@ const MyOrders = () => {
 
                 </div>
 
-                <Footer />
+                {/* <Footer /> */}
             </>
 
         );
@@ -94,7 +94,7 @@ const MyOrders = () => {
 
         <>
 
-            <Navbar />
+            {/* <Navbar /> */}
 
             <div className="container py-5">
 
@@ -257,7 +257,7 @@ const MyOrders = () => {
 
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
 
         </>
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 
 import { getMyOrders } from "../services/orderService";
 
@@ -49,7 +49,7 @@ const OrderDetails = () => {
         return (
 
             <>
-                <Navbar />
+                {/* <Navbar /> */}
 
                 <div className="container py-5 text-center">
 
@@ -57,7 +57,7 @@ const OrderDetails = () => {
 
                 </div>
 
-                <Footer />
+                {/* <Footer /> */}
 
             </>
 
@@ -70,7 +70,7 @@ const OrderDetails = () => {
         return (
 
             <>
-                <Navbar />
+                {/* <Navbar /> */}
 
                 <div className="container py-5 text-center">
 
@@ -85,7 +85,7 @@ const OrderDetails = () => {
 
                 </div>
 
-                <Footer />
+                {/* <Footer /> */}
 
             </>
 
@@ -97,7 +97,7 @@ const OrderDetails = () => {
 
         <>
 
-            <Navbar />
+            {/* <Navbar /> */}
 
             <div className="container py-5">
 
@@ -227,7 +227,7 @@ const OrderDetails = () => {
 
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
 
         </>
 
