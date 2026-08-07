@@ -5,14 +5,24 @@
 .custom-navbar {
     background: #111827;
     padding: 12px 35px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .12);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
     z-index: 999;
+    width: 100%;
 }
+
+/* ===========================================
+   Container
+=========================================== */
 
 .custom-navbar .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding-left: 60px !important;
+    padding-right: 60px !important;
 }
 
 /* ===========================================
@@ -24,7 +34,15 @@
     font-size: 30px;
     font-weight: 800;
     white-space: nowrap;
-    margin-right: 45px;
+
+    display: flex;
+    align-items: center;
+
+    margin-right: 30px;
+}
+
+.logo:hover {
+    text-decoration: none;
 }
 
 .logo-yellow {
@@ -40,10 +58,55 @@
 =========================================== */
 
 .navbar-collapse {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     width: 100%;
+
+    flex-grow: 1;
+
+}
+
+/* ===========================================
+   Bootstrap Fix
+=========================================== */
+
+.navbar {
+
+    --bs-navbar-padding-y: 0;
+
+    --bs-navbar-padding-x: 0;
+
+}
+
+.navbar-brand {
+
+    margin-right: 0;
+
+    padding: 0;
+
+}
+
+.navbar-toggler {
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+.navbar-toggler:focus {
+
+    box-shadow: none;
+
+}
+
+.navbar-toggler-icon {
+
+    filter: invert(1);
+
 }
 
 /* ===========================================
@@ -56,11 +119,13 @@
 
     align-items: center;
 
-    gap: 18px;
+    justify-content: center;
 
-    margin: 0;
+    flex: 1;
 
-    margin-left: 10px;
+    gap: 28px;
+
+    margin: 0 auto;
 
     padding: 0;
 
@@ -71,8 +136,16 @@
 }
 
 .menu-list .nav-item {
+
     list-style: none;
+
+    position: relative;
+
 }
+
+/* ===========================================
+   Nav Links
+=========================================== */
 
 .menu-list .nav-link {
 
@@ -82,9 +155,9 @@
 
     font-weight: 600;
 
-    padding: 10px 6px;
+    padding: 10px 0;
 
-    transition: .3s;
+    transition: all .3s ease;
 
     position: relative;
 
@@ -93,11 +166,9 @@
 }
 
 .menu-list .nav-link:hover {
-    color: #FFC107;
-}
 
-.menu-list .nav-link.active {
-    color: #FFC107 !important;
+    color: #FFC107;
+
 }
 
 .menu-list .nav-link::after {
@@ -120,10 +191,43 @@
 
 }
 
-.menu-list .nav-link:hover::after,
-.menu-list .nav-link.active::after {
+.menu-list .nav-link:hover::after {
 
     width: 100%;
+
+}
+
+/* ===========================================
+   Active Link
+=========================================== */
+
+.custom-active {
+
+    color: #FFC107 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+}
+
+.custom-active::after {
+
+    width: 100% !important;
+
+}
+
+.nav-link:focus,
+.nav-link:active,
+.custom-active:focus {
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    background: transparent !important;
 
 }
 
@@ -132,15 +236,21 @@
 =========================================== */
 
 .right-section {
+
     display: flex;
+
     align-items: center;
-    gap: 12px;
+
+    gap: 14px;
+
     margin-left: auto;
+
     flex-shrink: 0;
+
 }
 
 /* ===========================================
-   Search
+   Search Box
 =========================================== */
 
 .search-box {
@@ -153,7 +263,7 @@
 
 .search-box input {
 
-    width: 240px;
+    width: 220px;
 
     height: 42px;
 
@@ -166,6 +276,12 @@
     border-radius: 25px 0 0 25px;
 
     font-size: 14px;
+
+}
+
+.search-box input::placeholder {
+
+    color: #888;
 
 }
 
@@ -196,7 +312,7 @@
 }
 
 /* ===========================================
-   Wishlist & Cart
+   Wishlist & Cart Buttons
 =========================================== */
 
 .cart-btn {
@@ -225,7 +341,7 @@
 
     position: relative;
 
-    transition: .3s;
+    transition: all .3s ease;
 
 }
 
@@ -237,7 +353,19 @@
 
     border-color: #FFC107;
 
+    transform: translateY(-2px);
+
 }
+
+.cart-btn svg {
+
+    font-size: 18px;
+
+}
+
+/* ===========================================
+   Cart / Wishlist Count
+=========================================== */
 
 .cart-count {
 
@@ -267,6 +395,8 @@
 
     font-weight: 700;
 
+    border: 2px solid #111827;
+
 }
 
 /* ===========================================
@@ -277,14 +407,22 @@
 
     border-radius: 10px;
 
-    padding: 9px 18px;
+    padding: 9px 20px;
 
     font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-warning:hover {
+
+    transform: translateY(-2px);
 
 }
 
 /* ===========================================
-   Logout
+   Logout Button
 =========================================== */
 
 .logout-btn {
@@ -309,7 +447,7 @@
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: all .3s ease;
 
 }
 
@@ -321,70 +459,111 @@
 
 }
 
-/* ===========================================
-   Navbar Toggler
-=========================================== */
+.logout-btn svg {
 
-.navbar-toggler {
-
-    border: 1px solid rgba(255, 255, 255, .25);
+    font-size: 18px;
 
 }
 
-.navbar-toggler:focus {
+/* ===========================================
+   Buttons Focus Remove
+=========================================== */
+
+.cart-btn:focus,
+.logout-btn:focus,
+.btn-warning:focus {
+
+    outline: none;
 
     box-shadow: none;
 
 }
 
 /* ===========================================
-   Mobile
+   Tablet
 =========================================== */
 
-@media(max-width:991px) {
+@media (max-width: 991px) {
 
     .custom-navbar {
-
         padding: 12px 18px;
+    }
 
+    .custom-navbar .container-fluid {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 
     .logo {
-
-        margin-right: 0;
-
         font-size: 24px;
-
+        margin-right: 0;
     }
 
     .navbar-collapse {
-        width: 100%;
+
+        margin-top: 18px;
+
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        width: 100%;
+
     }
 
     .menu-list {
+
+        width: 100%;
+
         display: flex;
-        align-items: center;
-        gap: 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        gap: 8px;
+
         margin: 0;
+
         padding: 0;
-        list-style: none;
-        flex: 1;
+
+    }
+
+    .menu-list .nav-item {
+
+        width: 100%;
+
+    }
+
+    .menu-list .nav-link {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 10px 0;
+
     }
 
     .right-section {
 
         width: 100%;
 
-        margin-left: 0;
-
-        margin-top: 18px;
+        display: flex;
 
         flex-wrap: wrap;
 
-        gap: 10px;
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 20px;
+
+        margin-left: 0;
 
     }
 
@@ -396,12 +575,11 @@
 
     .search-box input {
 
-        width: 100%;
+        width: calc(100% - 46px);
 
     }
 
     .cart-btn,
-
     .logout-btn {
 
         width: 42px;
@@ -412,11 +590,23 @@
 
 }
 
-@media(max-width:576px) {
+/* ===========================================
+   Mobile
+=========================================== */
+
+@media (max-width:576px) {
 
     .custom-navbar {
 
         padding: 10px 15px;
+
+    }
+
+    .custom-navbar .container-fluid {
+
+        padding-left: 15px !important;
+
+        padding-right: 15px !important;
 
     }
 
@@ -426,7 +616,15 @@
 
     }
 
+    .search-box {
+
+        width: 100%;
+
+    }
+
     .search-box input {
+
+        width: calc(100% - 46px);
 
         font-size: 13px;
 
@@ -438,33 +636,195 @@
 
     }
 
+    .cart-btn,
+    .logout-btn {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
 }
 
+/* ===========================================
+   Dropdown Menu
+=========================================== */
+
 .dropdown-menu {
+
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-    padding: 8px 0;
+
+    border-radius: 12px;
+
+    padding: 10px 0;
+
+    min-width: 220px;
+
+    margin-top: 12px;
+
+    background: #fff;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+
+    animation: dropdownFade .25s ease;
+
 }
 
 .dropdown-item {
-    padding: 10px 18px;
+
+    padding: 11px 20px;
+
+    font-size: 15px;
+
     font-weight: 500;
+
+    color: #333;
+
     transition: .3s;
+
 }
 
 .dropdown-item:hover {
-    background: #0d6efd;
-    color: #fff;
+
+    background: #FFC107;
+
+    color: #111827;
+
 }
 
 .dropdown-toggle::after {
+
     display: none;
+
 }
 
+/* ===========================================
+   Active Link
+=========================================== */
+
 .custom-active {
+
     color: #FFC107 !important;
+
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
+}
+
+.custom-active::after {
+
+    width: 100% !important;
+
+}
+
+/* ===========================================
+   Bootstrap Fix
+=========================================== */
+
+.nav-link:focus,
+.nav-link:active,
+.nav-link.show,
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+
+    background: transparent !important;
+
+    color: #FFC107 !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+}
+
+.navbar-nav .nav-link.active {
+
+    background: transparent !important;
+
+    color: #FFC107 !important;
+
+}
+
+.btn:focus {
+
+    box-shadow: none !important;
+
+}
+
+/* ===========================================
+   Animation
+=========================================== */
+
+@keyframes dropdownFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   Desktop Alignment Fix
+=========================================== */
+
+@media (min-width:992px) {
+
+    .navbar-expand-lg .navbar-collapse {
+
+        display: flex !important;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+    .menu-list {
+
+        flex: 1;
+
+        justify-content: center;
+
+    }
+
+    .right-section {
+
+        margin-left: auto;
+
+    }
+
+}
+
+/* ===========================================
+   Prevent Layout Shift
+=========================================== */
+
+.custom-navbar {
+
+    min-height: 72px;
+
+}
+
+.logo,
+.menu-list,
+.right-section {
+
+    flex-shrink: 0;
+
 }

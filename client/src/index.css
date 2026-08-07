@@ -1,5 +1,12 @@
-/* Google Font */
+/* ================================
+   Google Font
+================================ */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ================================
+   Global
+================================ */
 
 * {
   margin: 0;
@@ -34,14 +41,29 @@ section {
   width: 100%;
 }
 
-.container-fluid {
-  padding-left: 60px;
-  padding-right: 60px;
+/* ================================
+   IMPORTANT
+   Remove Bootstrap Override
+================================ */
+
+/*
+❌ DO NOT USE
+
+.container-fluid{
+    padding-left:60px;
+    padding-right:60px;
 }
 
-@media (max-width: 992px) {
-  .container-fluid {
-    padding-left: 20px;
-    padding-right: 20px;
+*/
+
+/* ================================
+   Mobile
+================================ */
+
+@media(max-width:992px) {
+
+  body {
+    overflow-x: hidden;
   }
+
 }

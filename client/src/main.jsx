@@ -12,22 +12,24 @@ import "./index.css";
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
 
-  <BrowserRouter>
+    <BrowserRouter>
 
-    <App />
+      <App />
 
-    <ToastContainer
-      position="top-right"
-      autoClose={2000}
-      hideProgressBar={false}
-      newestOnTop
-      closeOnClick
-      pauseOnHover
-      draggable
-      theme="colored"
-    />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
 
-  </BrowserRouter>
+    </BrowserRouter>
 
+  </React.StrictMode>
 );
